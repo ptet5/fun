@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enter to Play Video</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+    }
+    #enterBtn {
+      font-size: 3rem;
+      padding: 2rem 4rem;
+      border: none;
+      border-radius: 1rem;
+      background: #2196f3;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    #enterBtn:hover {
+      background: #1769aa;
+    }
+    #videoContainer {
+      display: none;
+      width: 80vw;
+      max-width: 900px;
+    }
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 1rem;
+      box-shadow: 0 0 20px #0008;
+    }
+  </style>
+</head>
+<body>
+  <button id="enterBtn">ENTER</button>
+  <div id="videoContainer">
+    <video id="myVideo" controls>
+      <source src="ngtgyu.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <script>
+    document.getElementById('enterBtn').onclick = function() {
+      document.getElementById('enterBtn').style.display = 'none';
+      document.getElementById('videoContainer').style.display = 'block';
+      document.getElementById('myVideo').play();
+    };
+  </script>
+</body>
+</html>
